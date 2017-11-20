@@ -33,16 +33,16 @@ source ./set_bosh.sh
 ./upgrade_stemcell.sh
 ```
 
-## Scale Workers
-
-```bash
-./scale_cluster.sh
-```
-
 ## Update CFCR to 0.8.1
 
 ```bash
 ./upgrade_version.sh
+```
+
+## Scale Workers
+
+```bash
+./scale_cluster.sh
 ```
 
 
