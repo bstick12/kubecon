@@ -12,6 +12,7 @@ Configures local environment with Tarballs and required repositories
 
 ```bash
 ./configure_bosh.sh
+source ./set_bosh.sh
 ```
 
 ## Deploy Initial version of CFCR 0.8.0
