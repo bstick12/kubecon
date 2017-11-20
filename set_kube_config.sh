@@ -10,7 +10,7 @@ CREDHUB_CA_CERT=$(bosh int --path /credhub_tls/ca cfcr/creds.yml)
 credhub login -u credhub-cli -p ${CREDHUB_PWD} -s https://192.168.50.6:8844 --skip-tls-validation
 
 bosh int <(credhub get -n "/${DIRECTOR_NAME}/${DEPLOYMENT}/tls-kubernetes" --output-json) --path=/value/ca > cfcr/kubernetes.crt
-kubectl config set-cluster ${DEPLOYMENT} --server https://10.240.0.2:8443 --embed-certs=true --certificate-authority=cfcr/kubernetes.crt
+kubectl config set-cluster ${DEPLOYMENT} --server https://master.cfcr.internal:8443 --embed-certs=true --certificate-authority=cfcr/kubernetes.crt
 
 KUBERNETES_PWD=$(bosh int <(credhub get -n "/${DIRECTOR_NAME}/${DEPLOYMENT}/kubo-admin-password" --output-json) --path=/value)
 kubectl config set-credentials "${DIRECTOR_NAME}-admin" --token=${KUBERNETES_PWD}

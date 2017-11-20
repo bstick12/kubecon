@@ -34,10 +34,12 @@ instance_groups:
   persistent_disk_type: 5120
 
 - name: master
-  instances: 1
+  instances: 2
   networks:
   - name: *network-name
-    static_ips: [((kubernetes_master_host))]
+    static_ips:
+      - 10.240.0.2
+      - 10.240.0.3
   azs: [z1]
   jobs:
   - name: kubo-dns-aliases

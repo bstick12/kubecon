@@ -11,6 +11,12 @@ fi
 
 git -C kubo-bosh-lite pull
 
+brew install haproxy
+
+cp haproxy.cfg /usr/local/etc/haproxy.cfg
+
+haproxy -f /usr/local/etc/haproxy.cfg > /dev/null &
+
 wget -q --show-progress -nc https://github.com/cloudfoundry-incubator/kubo-release/releases/download/v0.8.0/kubo-release-0.8.0.tgz
 wget -q --show-progress -nc https://github.com/cloudfoundry-incubator/kubo-release/releases/download/v0.8.1/kubo-release-0.8.1.tgz
 
