@@ -1,19 +1,15 @@
-name: kubecon-stemcell 
+name: kubecon
 
 features:
   use_dns_addresses: true
 
 releases:
 - name: kubo-etcd
-  version: 2
-  url: https://github.com/pivotal-cf-experimental/kubo-etcd/releases/download/v2/kubo-etcd.2.tgz
-  sha1: ae95e661cd9df3bdc59ee38bf94dd98e2f280d4f
-- name: kubo
   version: latest
+- name: kubo
+  version: 0.8.0
 - name: docker
-  version: 28.0.1
-  url: https://bosh.io/d/github.com/cf-platform-eng/docker-boshrelease?v=28.0.1
-  sha1: 448eaa2f478dc8794933781b478fae02aa44ed6b
+  version: latest
 stemcells:
 - alias: trusty
   os: ubuntu-trusty
@@ -32,6 +28,7 @@ instance_groups:
       etcd:
         require_ssl: false
         peer_require_ssl: false
+        delete_data_dir_on_stop: false
   stemcell: trusty
   vm_type: common
   persistent_disk_type: 5120

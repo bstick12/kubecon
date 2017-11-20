@@ -2,7 +2,7 @@
 
 set +x
 
-DEPLOYMENT=${1:-kubecon-stemcell}
+DEPLOYMENT=${1:-kubecon}
 DIRECTOR_NAME=${2:-kubecon}
 
 CREDHUB_PWD=$(bosh int --path /credhub_cli_password cfcr/creds.yml)

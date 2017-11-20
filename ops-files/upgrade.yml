@@ -1,0 +1,4 @@
+- type: replace
+  path: /releases/name=kubo/version
+  value: 0.8.1
+
