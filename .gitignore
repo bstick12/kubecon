@@ -1,0 +1,5 @@
+bosh-deployment/
+kubo-bosh-lite/
+demo-magic.sh
+*.tgz
+cfcr/
