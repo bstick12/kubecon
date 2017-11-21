@@ -12,6 +12,6 @@ pe "bosh -e cfcr deploy -d kubecon initial.yml \
 -o ops-files/stemcell.yml \
 -o ops-files/scale.yml \
 -o ops-files/upgrade.yml \
--v kubernetes_master_host=10.240.0.2"
+-v kubernetes_master_host=master.cfcr.internal"
 
 
