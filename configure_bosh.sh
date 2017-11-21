@@ -41,6 +41,7 @@ pe "bosh -e cfcr upload-release kubo-etcd.4.tgz --non-interactive"
 pe "bosh -e cfcr upload-release kubo-release-0.8.0.tgz --non-interactive"
 pe "bosh -e cfcr upload-release kubo-release-0.8.1.tgz --non-interactive"
 pe "bosh -e cfcr upload-release docker-boshrelease-28.0.1.tgz --non-interactive"
+pe "bosh -e cfcr upload-release bosh-dns-release-0.0.11.tgz --non-interactive"
 
 pe "sudo route add -net 10.240.0.0/16 192.168.50.6"
 
