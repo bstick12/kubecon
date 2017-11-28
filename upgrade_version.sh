@@ -6,6 +6,8 @@ setup_demo_magic
 
 . set_bosh.sh > /dev/null
 
+pe "cat ops-files/stemcell.yml"
+
 pe "cat ops-files/upgrade.yml"
 
 pe "bosh -e cfcr deploy -d kubecon initial.yml \
