@@ -53,7 +53,7 @@ In another terminal run
 watch kubectl get nodes
 ```
 
-## Update CFCR to 0.8.1
+## Upgrade the version of K8s and Stemcell
 
 ```bash
 ./upgrade_version.sh
