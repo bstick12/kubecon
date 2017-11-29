@@ -15,22 +15,42 @@ Configures local environment with Tarballs and required repositories
 source ./set_bosh.sh
 ```
 
+## Setup HAProxy locally
+
+In a different terminal window
+
+```bash
+haproxy -f haproxy.cfg
+```
+
+Put these two entries in your /etc/hosts
+
+```bash
+127.0.0.1 master.cfcr.internal
+127.0.0.1 worker.cfcr.internal
+```
+
 ## Deploy Initial version of CFCR 0.8.0
 
 ```bash
 ./create_initial.sh
 ```
 
-## Connect via KubeCtl
+## Once a single worker nodes is created by BOSH
+
+### Deploy an application
+
+Open another terminal and run
 
 ```bash
 ./set_kube_config.sh
+./deploy_app.sh
 ```
 
-## Update Stemcells
+In another terminal run 
 
 ```bash
-./upgrade_stemcell.sh
+watch kubectl get nodes
 ```
 
 ## Update CFCR to 0.8.1
