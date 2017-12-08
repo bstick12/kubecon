@@ -22,7 +22,7 @@ wget -q --show-progress -nc https://github.com/pivotal-cf-experimental/kubo-etcd
 wget -q --show-progress -nc --content-disposition https://bosh.io/d/github.com/cf-platform-eng/docker-boshrelease?v=28.0.1
 wget -q --show-progress -nc --content-disposition https://bosh.io/d/github.com/cloudfoundry/bosh-dns-release?v=0.0.11
 
-wget -q --show-progress -nc https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.5-warden-boshlite-ubuntu-trusty-go_agent.tgz
-wget -q --show-progress -nc https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3445.16-warden-boshlite-ubuntu-trusty-go_agent.tgz
+wget -q --show-progress -nc https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.11-warden-boshlite-ubuntu-trusty-go_agent.tgz
+wget -q --show-progress -nc https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.12-warden-boshlite-ubuntu-trusty-go_agent.tgz
 
 

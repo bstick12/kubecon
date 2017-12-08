@@ -16,4 +16,4 @@ pe "kubectl rollout status deployment/nginx -w"
 
 pe "kubectl get all"
 
-pe "while [[ true ]]; do curl -I -s -L worker.cfcr.internal:31000 | grep HTTP; sleep .5; done"
+pe "while [[ true ]]; do curl -I -s -L worker.cfcr.internal:31000 | grep -e HTTP -e Date; sleep .5; done"

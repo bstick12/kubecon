@@ -31,17 +31,19 @@ source set_bosh.sh
 
 pe "bosh -e 192.168.50.6 login --ca-cert <(bosh int cfcr/creds.yml --path /director_ssl/ca)"
 pe "bosh -e 192.168.50.6 alias-env cfcr --ca-cert <(bosh int cfcr/creds.yml --path /director_ssl/ca)"
-pe "bosh -e cfcr update-runtime-config -n bosh-deployment/runtime-configs/dns.yml --non-interactive"
-pe "bosh -e cfcr update-cloud-config kubo-bosh-lite/cloud-config.yml --non-interactive"
 
 pe "bosh -e cfcr upload-stemcell bosh-stemcell-3445.16-warden-boshlite-ubuntu-trusty-go_agent.tgz --non-interactive"
-pe "bosh -e cfcr upload-stemcell bosh-stemcell-3468.5-warden-boshlite-ubuntu-trusty-go_agent.tgz --non-interactive"
+pe "bosh -e cfcr upload-stemcell bosh-stemcell-3468.11-warden-boshlite-ubuntu-trusty-go_agent.tgz --non-interactive"
+pe "bosh -e cfcr upload-stemcell bosh-stemcell-3468.12-warden-boshlite-ubuntu-trusty-go_agent.tgz --non-interactive"
 
 pe "bosh -e cfcr upload-release kubo-etcd.4.tgz --non-interactive"
 pe "bosh -e cfcr upload-release kubo-release-0.8.0.tgz --non-interactive"
 pe "bosh -e cfcr upload-release kubo-release-0.8.1.tgz --non-interactive"
 pe "bosh -e cfcr upload-release docker-boshrelease-28.0.1.tgz --non-interactive"
 pe "bosh -e cfcr upload-release bosh-dns-release-0.0.11.tgz --non-interactive"
+
+pe "bosh -e cfcr update-runtime-config -n bosh-deployment/runtime-configs/dns.yml --non-interactive"
+pe "bosh -e cfcr update-cloud-config kubo-bosh-lite/cloud-config.yml --non-interactive"
 
 pe "sudo route add -net 10.240.0.0/16 192.168.50.6"
 
