@@ -4,6 +4,7 @@ if [ ! -d "bosh-deployment" ]; then
   git clone git@github.com:cloudfoundry/bosh-deployment.git
 fi
 git -C bosh-deployment pull
+git -C bosh-deployment reset --hard b6511fc524ea83e4464fe1958ea747dd18adcdd1
 
 if [ ! -d "kubo-bosh-lite" ]; then
   git clone git@github.com:bstick12/kubo-bosh-lite.git
