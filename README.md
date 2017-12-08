@@ -53,10 +53,16 @@ In another terminal run
 watch kubectl get nodes
 ```
 
-## Upgrade the version of K8s and Stemcell
+## Upgrade the version of K8s
 
 ```bash
 ./upgrade_version.sh
+```
+
+## Upgrade the stemcell
+
+```bash
+./upgrade_stemcell.sh
 ```
 
 ## Scale Workers
